@@ -17,7 +17,6 @@ package ethereum.eth.v1alpha1;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "eth/v1alpha1/attestation.proto";
-import "eth/v1alpha1/shard.proto";
 
 option csharp_namespace = "Ethereum.Eth.v1alpha1";
 option go_package = "github.com/prysmaticlabs/ethereumapis/eth/v1alpha1;eth";
@@ -42,8 +41,6 @@ message BeaconBlock {
 
     // The block body itself.
     BeaconBlockBody body = 5;
-
-    repeated ShardHeader shard_headers = 6 [(gogoproto.moretags) = "ssz-max:\"128\""];
 }
 
 // The signed version of beacon block.

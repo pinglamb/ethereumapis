@@ -67,14 +67,11 @@ message AttestationData {
     // 32 byte root of the LMD GHOST block vote.
     bytes beacon_block_root = 3 [(gogoproto.moretags) = "ssz-size:\"32\""];
 
-    // The most recent justified checkpoint in the beacon state.
+    // The most recent justified checkpoint in the beacon state
     Checkpoint source = 4;
 
-    // The checkpoint attempting to be justified for the current epoch and its epoch boundary block.
+    // The checkpoint attempting to be justified for the current epoch and its epoch boundary block
     Checkpoint target = 5;
-
-    // The shard header root of the attestation attesting for.
-    bytes shard_header_root = 6 [(gogoproto.moretags) = "ssz-size:\"32\""];
 }
 
 message Checkpoint {
